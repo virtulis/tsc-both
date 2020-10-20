@@ -1,0 +1,35 @@
+{
+	"name": "tsc-both",
+	"version": "0.2.0",
+	"author": {
+		"email": "danko@very.lv",
+		"name": "Danko Alexeyev",
+		"url": "http://very.lv"
+	},
+	"description": "Produce both .js and .mjs files with tsc",
+	"bin": "./tsc-both.js",
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build"
+	},
+	"homepage": "https://bitbucket.org/verypositive/tsc-both",
+	"repository": {
+		"url": "https://bitbucket.org/verypositive/tsc-both",
+		"type": "hg"
+	},
+	"license": "MIT",
+	"keywords": [
+		"typescript",
+		"tsc",
+		"commonjs",
+		"mjs"
+	],
+	"dependencies": {
+		"glob": "^7.1.6",
+		"rimraf": "^3.0.2"
+	},
+	"devDependencies": {
+		"@types/rimraf": "^3.0.0",
+		"typescript": "^4.0.3"
+	}
+}
