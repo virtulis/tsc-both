@@ -1,6 +1,6 @@
 {
 	"name": "tsc-both",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"author": {
 		"email": "danko@very.lv",
 		"name": "Danko Alexeyev",
@@ -12,10 +12,10 @@
 		"build": "tsc",
 		"prepare": "npm run build"
 	},
-	"homepage": "https://bitbucket.org/verypositive/tsc-both",
+	"homepage": "https://github.com/virtulis/tsc-both",
 	"repository": {
-		"url": "https://bitbucket.org/verypositive/tsc-both",
-		"type": "hg"
+		"url": "https://github.com/virtulis/tsc-both.git",
+		"type": "git"
 	},
 	"license": "MIT",
 	"keywords": [
