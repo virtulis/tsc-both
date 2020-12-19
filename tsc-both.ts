@@ -27,11 +27,11 @@ for (let fn of glob.sync(dir + '/**/*.js')) {
 for (let fn of glob.sync(dir + '/**/*.mjs')) {
 	const code = fs.readFileSync(fn, { encoding: 'utf-8' })
 		.replace(
-			/(import|export)(\s.*?\sfrom\s+)['"](\..*)['"]/g,
-			(ss, kw, what, from) => {
-				if (from.match(/\.mjs$/)) return ss;
+			/(import|export)(\s.*?\sfrom)?\s+(['"])(\..*)['"]/g,
+			(ss, kw, what, q, from) => {
+				if (!from || from.match(/\.mjs$/)) return ss;
 				const proper = from.replace(/.(ts|js)$/, '') + '.mjs';
-				if (fs.existsSync(path.resolve(path.dirname(fn), proper))) return kw + what + "'" + proper + "'";
+				if (fs.existsSync(path.resolve(path.dirname(fn), proper))) return kw + (what || '') + q + proper + q;
 				return ss;
 			}
 		);
